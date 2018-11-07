@@ -70,10 +70,6 @@ catkin_package(
 ## Build ##
 ###########
 
-foreach(inc ${catkin_INCLUDE_DIRS})
-	message(${inc})
-endforeach()
-
 include_directories(include
   ${catkin_INCLUDE_DIRS}
   ${Eigen_INCLUDE_DIRS}
@@ -126,19 +122,19 @@ install(DIRECTORY launch/
     )
 
 install(
-	TARGETS
-	${PROJECT_NAME}_continuous_node
-	${PROJECT_NAME}_single_image_server_node
-	${PROJECT_NAME}_single_image_client_node
+    TARGETS
+    ${PROJECT_NAME}_continuous_node
+    ${PROJECT_NAME}_single_image_server_node
+    ${PROJECT_NAME}_single_image_client_node
     ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
     LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
     RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
     )
 
 install(
-	FILES
-	nodelet_plugins.xml
-	config/settings.yaml
-	config/tags.yaml
+    FILES
+    nodelet_plugins.xml
+    config/settings.yaml
+    config/tags.yaml
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
     )
