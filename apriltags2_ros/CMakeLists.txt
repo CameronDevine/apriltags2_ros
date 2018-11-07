@@ -135,6 +135,10 @@ install(
     RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
     )
 
-install(FILES nodelet_plugins.xml
+install(
+	FILES
+	nodelet_plugins.xml
+	config/settings.yaml
+	config/tags.yaml
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
     )
